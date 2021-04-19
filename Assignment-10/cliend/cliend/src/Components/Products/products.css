@@ -1,0 +1,15 @@
+.img{
+    height: 250px;
+}
+
+.footer{
+    background-color: white;
+    border: 1px solid white;
+}
+.price{
+    font-size: 20px;
+    color: green;
+    font-weight: 700;
+    border-radius: 5px;
+
+}
