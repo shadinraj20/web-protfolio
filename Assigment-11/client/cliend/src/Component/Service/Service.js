@@ -21,7 +21,7 @@ const Service = () => {
   },[])
 
   return (
-    <div className="row">
+       
       <div className="container-lg mt-5">
         <div className="row justify-content-center">
           <div className="col-4 text-center">
@@ -34,13 +34,16 @@ const Service = () => {
             <p>We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health</p>
           </div>
         </div>
-      </div>
-      <button onClick={handleClick}>add all</button>
+        <div className="row">
+          {/* <button onClick={handleClick}>add all</button> */}
       {
         eventData.map(e => <ServiceDetail event={e}></ServiceDetail>)
       }
+        </div>
+      </div>
+      
 
-    </div>
+ 
 
 
 

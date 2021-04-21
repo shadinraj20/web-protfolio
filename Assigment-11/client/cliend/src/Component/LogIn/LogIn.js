@@ -5,11 +5,12 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
 import firebaseConfig from './firebaseConfig';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 firebase.initializeApp(firebaseConfig);
 
 const LogIn = () => {
+  const history= useHistory();
 
     const handleSignInGoogle=()=>{
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -19,12 +20,13 @@ const LogIn = () => {
     const credential = result.credential;
     const user = result.user;
     console.log(user);
+    history.push('/admin/book')
 
   }).catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     console.log(errorCode,errorMessage);
-
+    
   });
 
     }
@@ -34,10 +36,10 @@ const LogIn = () => {
                 <div className="card">
                     <div className="card-body justify-content-center">
                         <h5 className="card-title title">Log In</h5>
-                      <Link to='/AdminBook'>  <button className="btn btn-light rounded-pill" onClick={handleSignInGoogle} type="submit">
+                        <button className="btn btn-light rounded-pill" onClick={handleSignInGoogle} type="submit">
                           <img className="image" src={image} alt="" width="40" className="pe-3"/>
                           Continue With Google
-                          </button>  </Link>
+                          </button> 
   
                     </div>
                 </div>
