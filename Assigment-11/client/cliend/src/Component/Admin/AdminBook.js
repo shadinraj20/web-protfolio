@@ -30,6 +30,7 @@ export default function AdminBook() {
       <div className="form-check form-check-inline">
         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="paypal" />
         <label className="form-check-label" for="inlineRadio2">Paypal</label>
+        <button className="btn btn-primary"> Pay</button>
       </div>
     </form>
   )
