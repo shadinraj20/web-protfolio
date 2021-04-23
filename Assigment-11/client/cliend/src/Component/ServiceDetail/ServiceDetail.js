@@ -13,7 +13,7 @@ const ServiceDetail = (props) => {
       reset: true,
       reverse: flip,
       delay: 200,
-      config: config.default,
+      config: config.molasses,
       onRest: () => set(!flip),
     })
     const event = props.event;
