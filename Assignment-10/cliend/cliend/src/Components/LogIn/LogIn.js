@@ -27,7 +27,7 @@ const handleSignInGoogle = () => {
     const user = result.user;
     const loggedInUser = {name:user.displayName,email:user.email,img:user.photoURL};
     localStorage.setItem('user', JSON.stringify(loggedInUser));
-    history.replace(from);
+    history.replace(from.pathname);
 
   }).catch((error) => {
     const errorMessage = error.message;

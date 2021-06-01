@@ -12,6 +12,7 @@ const Home = () => {
                 </div>
             </div>
             <TotalProduct></TotalProduct>
+           
         </div>
     );
 };

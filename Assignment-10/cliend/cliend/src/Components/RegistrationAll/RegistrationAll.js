@@ -12,6 +12,8 @@ const RegistrationAll = () => {
             .then(data => setMyRegistration(data));
     }, [])
 
+    
+
     return (
         <div className="row">
             <div className="col-md-4">

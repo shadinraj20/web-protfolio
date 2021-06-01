@@ -49,6 +49,7 @@ const CreateEvents = () => {
         const newCreateData = { ...createData };
         newCreateData.productName = data.name
         newCreateData.productPrice = data.price
+        newCreateData.productPrice = data.date
         setCreateData(newCreateData);
 
 
@@ -62,12 +63,12 @@ const CreateEvents = () => {
       <div className="row justify-content-center">
         <div className="col-lg-6">
           <form className="mb-3" >
-            <h1>Create an Account</h1>
-            <input className="form-control mb-3" type="text" name="UserName" placeholder="UserName" value={user.name} />
-            <input className="form-control mb-3" type="text" name="productName" placeholder="productName" value={product.name} />
-            <input className="form-control mb-3" type="password" name="password" placeholder="password" required />
-            <input className="form-control mb-3" type="date" onChange={handleDateChange} name="date" placeholder="date" />
-            <input type="submit" onClick={handleSubmit} className="btn btn-success" value="Create an Account" />
+            <h1>Register product</h1>
+            <input className="form-control mb-3" type="text" name="UserName" placeholder="UserName" value={user.name} required/>
+            <input className="form-control mb-3" type="text" name="productName" placeholder="productName" value={product.name}required />
+            <input className="form-control mb-3" type="text" name="price" placeholder="price" value={product.price}required />
+            <input className="form-control mb-3" type="date" onChange={handleDateChange} name="date" placeholder="date" value={product.date} required/>
+            <input type="submit" onClick={handleSubmit} className="btn btn-success" value="Register product" />
           </form>
         </div>
       </div>
