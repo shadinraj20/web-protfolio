@@ -1,16 +1,13 @@
 import React from 'react';
 
 const OrderDetails = () => {
-    useEffect(() => {
-        fetch(`https://limitless-badlands-88219.herokuapp.com/products/`)
-            .then(res => res.json())
-            .then(data => setMyRegistration(data));
-    }, [])
+    // useEffect(() => {
+    //     fetch(`https://limitless-badlands-88219.herokuapp.com/products/`)
+    //         .then(res => res.json())
+    //         .then(data => setMyRegistration(data));
+    // }, [])
     return (
         <div className="row">
-        <div className="col-md-4">
-            <SideBar></SideBar>
-        </div>
         <div className="col-md-8 mt-5">
             <table className="table container">
                 <thead>
@@ -22,8 +19,8 @@ const OrderDetails = () => {
                 </thead>
                 <tbody>
                 <tr>
-                <td>{name}</td>
-                <td>{price}</td>
+                <td></td>
+                <td></td>
                
             </tr>
 

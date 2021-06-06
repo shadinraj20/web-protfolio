@@ -6,9 +6,8 @@ import { faCoffee, faTrash } from '@fortawesome/free-solid-svg-icons'
 const RegistrationDetail = (props) => {
     const products = props.products;
     const {  name, price, } = products;
-    // https://limitless-badlands-88219.herokuapp.com
     const deleteProduct = (id) => {
-        fetch(`http://localhost:5000/deleteProducts/${id}`,{
+        fetch(`https://limitless-badlands-88219.herokuapp.com/deleteProducts/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())

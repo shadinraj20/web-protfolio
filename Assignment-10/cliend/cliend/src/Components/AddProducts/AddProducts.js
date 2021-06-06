@@ -4,11 +4,10 @@ import SideBar from '../SideBar/SideBar';
 
 const AddProducts = () => {
   const history = useHistory()
-  // https://limitless-badlands-88219.herokuapp.com/addProduct
   const [product, setProduct] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault(e)
-    fetch('http://localhost:5000/addProduct', {
+    fetch('https://limitless-badlands-88219.herokuapp.com/addProducts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(product)

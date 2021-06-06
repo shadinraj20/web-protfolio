@@ -15,6 +15,7 @@ import CheckOut from './Components/CheckOut/CheckOut';
 import AddProductsList from './Components/AddProducts/AddProducts';
 import RegistrationAll from './Components/RegistrationAll/RegistrationAll';
 import AddProducts from './Components/AddProducts/AddProducts';
+import OrderDetails from './Components/OrderDetails/OrderDetails';
 
 
 function App() {
@@ -41,6 +42,9 @@ function App() {
           <PrivateRoute exact path="/AddProducts">
            <AddProducts/>
           </PrivateRoute>
+          <Route exact path="/orderDetail">
+           <OrderDetails/>
+          </Route>
            <Route path="/">
             <Home />
           </Route>
