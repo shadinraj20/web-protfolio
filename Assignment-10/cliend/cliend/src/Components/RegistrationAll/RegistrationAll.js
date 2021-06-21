@@ -15,7 +15,7 @@ const RegistrationAll = () => {
     
 
     return (
-        <div className="row">
+        <div className="row ">
             <div className="col-md-4">
                 <SideBar></SideBar>
             </div>

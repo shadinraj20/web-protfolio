@@ -10,12 +10,12 @@ import Home from './Components/Home/Home';
 import Navbar from './Components/Navbar/Navbar';
 import LogIn from './Components/LogIn/LogIn';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-import CreateEvents from './Components/CreateEvents/CreateEvents';
 import CheckOut from './Components/CheckOut/CheckOut';
+import Order from './Components/Order/Order';
 import AddProductsList from './Components/AddProducts/AddProducts';
 import RegistrationAll from './Components/RegistrationAll/RegistrationAll';
 import AddProducts from './Components/AddProducts/AddProducts';
-import OrderDetails from './Components/OrderDetails/OrderDetails';
+import CheckOutDetail from './Components/CheckOutDetail/CheckOutDetail';
 
 
 function App() {
@@ -30,11 +30,11 @@ function App() {
           <Route exact path="/login">
             <LogIn/>
           </Route>
-          <PrivateRoute exact path='/CreateEvents/:id'>
-            <CreateEvents/>
+          <PrivateRoute exact path='/CheckOut/:id'>
+            <CheckOut/>
           </PrivateRoute>
-          <PrivateRoute exact path="/checkOut">
-           <CheckOut/>
+          <PrivateRoute exact path="/order">
+           <Order/>
           </PrivateRoute>
           <PrivateRoute exact path="/RegistrationAll">
            <RegistrationAll/>
@@ -42,9 +42,9 @@ function App() {
           <PrivateRoute exact path="/AddProducts">
            <AddProducts/>
           </PrivateRoute>
-          <Route exact path="/orderDetail">
-           <OrderDetails/>
-          </Route>
+          <PrivateRoute exact path="/CheckOutDetail/:id">
+           <CheckOutDetail/>
+           </PrivateRoute>
            <Route path="/">
             <Home />
           </Route>

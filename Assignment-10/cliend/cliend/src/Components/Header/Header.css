@@ -1,0 +1,10 @@
+.bg{
+    background-image: url('../../image/logo3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+.search{
+    margin-top:190px;
+}

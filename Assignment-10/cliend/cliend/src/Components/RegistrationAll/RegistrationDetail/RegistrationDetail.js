@@ -1,12 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faTrash } from '@fortawesome/free-solid-svg-icons'
+import {  faTrash } from '@fortawesome/free-solid-svg-icons'
 
 
 const RegistrationDetail = (props) => {
     const products = props.products;
-    const {  name, price, } = products;
+    const {  UserName, Price, } = products;
     const deleteProduct = (id) => {
+        console.log(id);
         fetch(`https://limitless-badlands-88219.herokuapp.com/deleteProducts/${id}`,{
             method: 'DELETE'
         })
@@ -19,8 +20,8 @@ const RegistrationDetail = (props) => {
     }
     return (
              <tr>
-                <td>{name}</td>
-                <td>{price}</td>
+                <td>{UserName}</td>
+                <td>{Price}</td>
                 <td><button onClick={()=> deleteProduct(products._id)} className="btn btn-danger"><FontAwesomeIcon icon={faTrash} /></button></td>
             </tr>
 

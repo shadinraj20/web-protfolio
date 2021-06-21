@@ -29,7 +29,7 @@ const TotalProduct = () => {
             {/* <button onClick={handleAllProduct}>Add all products</button> */}
 
             {
-                productData.map(pd => <Product product={pd} ></Product>)
+                productData.map(pd => <Product  product={pd} key={pd.id}></Product>)
             }
         </div>
     );
