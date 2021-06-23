@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   
-  // const userName = JSON.parse(localStorage.getItem('user'));
-  // const {name}=userName
-  // console.log(userName);
+  const userName = JSON.parse(localStorage.getItem('user'));
+  const {name}=userName
+  console.log(userName);
   
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,9 +31,9 @@ const Navbar = () => {
         <li className="nav-item me-5">
           <Link className="nav-link active" to="/">Deals</Link>
         </li>
-        {/* <li>
+        <li>
         <Link className="nav-link active" to="/">{name}</Link>
-        </li> */}
+        </li>
         
         <li className="nav-item me-5">
           <Link className="nav-link " to="/Login"><button className="btn btn-success">Log in</button></Link>

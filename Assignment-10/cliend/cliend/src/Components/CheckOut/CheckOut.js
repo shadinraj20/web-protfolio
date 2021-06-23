@@ -26,19 +26,22 @@ const CheckOut = () => {
     newCreateData.data = e.target.value;
     setCreateData(newCreateData);
   }
-
+  // fetch('https://limitless-badlands-88219.herokuapp.com/addCreate',
   const orderCheckOut = (e) => {
-    e.preventDefault()
-    fetch('https://limitless-badlands-88219.herokuapp.com/addCreate', {
+    // e.preventDefault()
+    delete createData._id
+    fetch(`https://limitless-badlands-88219.herokuapp.com/addCreate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(createData)
     })
       .then(res => res.json())
+      .then(data =>console.log(data))
       .then(data =>{
         history.push('/checkOutDetail')
 
       })
+
 
   }
   useEffect(() => {
